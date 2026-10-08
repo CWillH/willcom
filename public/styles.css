@@ -144,7 +144,7 @@ main { flex: 1; min-width: 0; overflow: clip; }
 .body-copy { font-size: 16px; line-height: 1.9; white-space: pre-line; }
 .empty-copy { color: var(--muted); }
 .text-link { display: inline-flex; align-items: center; gap: 16px; color: var(--navy); padding: 8px 0; }
-.site-footer { position: fixed; left: max(12px, env(safe-area-inset-left)); bottom: max(10px, env(safe-area-inset-bottom)); z-index: 1; margin: 0; padding: 0; font-size: 10px; line-height: 1.8; letter-spacing: .25px; color: #899299; }
+.site-footer { position: fixed; left: max(12px, env(safe-area-inset-left)); bottom: max(10px, env(safe-area-inset-bottom)); z-index: 20; width: max-content; margin: 0; padding: 0; pointer-events: none; font-size: 10px; line-height: 1.8; letter-spacing: .25px; color: #899299; background: var(--paper); }
 
 /* Experience cards */
 .experience-page { max-width: 940px; padding-top: 75px; }
