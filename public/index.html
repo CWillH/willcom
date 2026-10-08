@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f6">
+  <meta name="description" content="William Huang — Mechanical Engineering Portfolio">
+  <title>William Huang — Mechanical Engineering Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="preload" href="./assets/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <div class="home-backdrop" aria-hidden="true">
+    <div class="home-backdrop-drawing">
+      <div class="background-wireframe wallet-wireframe"></div>
+      <div class="experience-wireframes">
+        <div class="background-wireframe helios-wireframe"></div>
+      </div>
+      <div class="projects-wireframes">
+        <div class="background-wireframe towel-wireframe"></div>
+        <div class="background-wireframe arm-wireframe"></div>
+      </div>
+    </div>
+  </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="navigation" aria-label="Main navigation">
+      <a href="#home" data-route="home" aria-current="page"><span>Home</span></a>
+      <a href="#experience" data-route="experience"><span>Experience</span></a>
+      <a href="#projects" data-route="projects"><span>Projects</span></a>
+      <a href="#resume" data-route="resume"><span>Resume</span></a>
+      <a href="#contact" data-route="contact"><span>Contact</span></a>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="page home-page" id="home" aria-labelledby="home-heading">
+      <div class="hero">
+        <div class="hero-mark" aria-hidden="true"><span></span><i></i><span></span></div>
+        <p class="portfolio-label">Mechanical Engineering Portfolio</p>
+        <h1 id="home-heading" tabindex="-1">William Huang</h1>
+        <div class="hero-mark hero-mark-bottom" aria-hidden="true"><span></span><i></i><span></span></div>
+      </div>
+      <div class="summary">
+        <div id="summary-content" class="home-introduction"></div>
+      </div>
+      <section class="featured-projects" aria-labelledby="featured-heading">
+        <div class="featured-heading-row">
+          <h2 id="featured-heading">Sample projects</h2>
+        </div>
+        <div class="project-grid" id="featured-project-grid"></div>
+      </section>
+    </section>
+
+    <section class="page content-page experience-page" id="experience" aria-labelledby="experience-heading" hidden>
+      <h1 id="experience-heading" class="sr-only" tabindex="-1">Experience</h1>
+      <ol class="experience-list" id="timeline"></ol>
+    </section>
+
+    <section class="page content-page projects-page" id="projects" aria-labelledby="projects-heading" hidden>
+      <h1 id="projects-heading" class="sr-only" tabindex="-1">Projects</h1>
+      <div class="project-toolbar" role="group" aria-label="Filter projects">
+        <button type="button" class="filter active" data-filter="All" aria-pressed="true">All</button>
+        <button type="button" class="filter" data-filter="Internships" aria-pressed="false" hidden>Internships</button>
+        <button type="button" class="filter" data-filter="Personal" aria-pressed="false">Personal</button>
+        <button type="button" class="filter" data-filter="Student Teams" aria-pressed="false">Student Teams</button>
+        <button type="button" class="filter" data-filter="Classwork" aria-pressed="false">Classwork</button>
+      </div>
+      <div class="project-grid" id="project-grid"></div>
+      <p class="empty-projects" id="empty-projects" role="status" hidden>Projects coming soon</p>
+    </section>
+
+    <section class="page content-page resume-page" id="resume" aria-labelledby="resume-heading" hidden>
+      <h1 id="resume-heading" class="sr-only" tabindex="-1">Resume</h1>
+      <div id="resume-download-container"></div>
+      <div id="resume-viewer" class="resume-viewer"></div>
+    </section>
+
+    <section class="page content-page contact-page" id="contact" aria-labelledby="contact-heading" hidden>
+      <h1 id="contact-heading" class="sr-only" tabindex="-1">Contact</h1>
+      <div class="contact-links">
+        <a class="contact-detail" href="https://www.linkedin.com/in/c-williamhuang/" target="_blank" rel="noopener noreferrer" aria-label="William Huang on LinkedIn (opens in a new tab)">
+          <span class="contact-icon linkedin-icon" aria-hidden="true">in</span>
+          <span class="contact-text"><span class="contact-label">LinkedIn</span><span class="contact-value">William Huang</span></span>
+          <span class="external-arrow" aria-hidden="true">↗</span>
+        </a>
+        <button class="contact-detail" type="button" id="copy-email" data-email="c.william.huang@gmail.com" aria-label="Copy email address: c.william.huang@gmail.com">
+          <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></span>
+          <span class="contact-text"><span class="contact-label">Email</span><span class="contact-value">c.william.huang@gmail.com</span></span>
+          <span class="contact-copy-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4H4v12h4"/></svg></span>
+        </button>
+        <p id="contact-copy-status" class="contact-copy-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="project-dialog" class="project-dialog" aria-labelledby="project-dialog-title">
+    <div class="project-dialog-toolbar">
+      <button type="button" id="close-project" class="project-close" aria-label="Close details">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <article class="project-detail">
+      <header class="project-detail-header">
+        <div id="detail-dialog-logo" class="detail-dialog-logo" hidden></div>
+        <div class="detail-dialog-heading">
+          <h2 id="project-dialog-title" tabindex="-1"></h2>
+          <p id="project-dialog-purpose"></p>
+          <p id="detail-dialog-dates" class="experience-date" hidden></p>
+        </div>
+      </header>
+      <div id="project-detail-content" class="project-detail-content"></div>
+    </article>
+  </dialog>
+
+  <footer class="site-footer"><span>© <span id="year">2026</span> William Huang</span></footer>
+  <noscript><p class="noscript-message">Enable JavaScript to explore the portfolio or email <a href="mailto:c.william.huang@gmail.com">c.william.huang@gmail.com</a></p></noscript>
+</body>
+</html>
