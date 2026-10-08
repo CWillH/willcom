@@ -6,6 +6,8 @@ node_modules/
 .DS_Store
 coverage/
 /tmp/
+/public/assets/resume-preview/
+/public/resume-preview.json
 /tmp/video-tools/
 /tmp/project-content/
 /tmp/received-media/

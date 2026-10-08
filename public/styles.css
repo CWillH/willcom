@@ -274,7 +274,7 @@ html.project-open { overflow: hidden; }
 .pdf-status { padding: 30px; line-height: 1.8; color: var(--muted); }
 .pdf-sheet { position: relative; background: white; }
 .pdf-sheet + .pdf-sheet { border-top: 8px solid var(--line); }
-.pdf-sheet canvas { display: block; width: 100%; height: auto; }
+.pdf-sheet canvas, .pdf-sheet > img { display: block; width: 100%; height: auto; }
 .pdf-text-layer { position: absolute; inset: 0; overflow: clip; text-align: initial; line-height: 1; text-size-adjust: none; forced-color-adjust: none; transform-origin: 0 0; --min-font-size: 1; --text-scale-factor: calc(var(--total-scale-factor) * var(--min-font-size)); --min-font-size-inv: calc(1 / var(--min-font-size)); }
 .pdf-text-layer :is(span, br) { color: transparent; position: absolute; white-space: pre; cursor: text; transform-origin: 0 0; }
 .pdf-text-layer > :not(.markedContent), .pdf-text-layer .markedContent span:not(.markedContent) { z-index: 1; --font-height: 0; font-size: calc(var(--text-scale-factor) * var(--font-height)); --scale-x: 1; --rotate: 0deg; transform: rotate(var(--rotate)) scaleX(var(--scale-x)) scale(var(--min-font-size-inv)); }

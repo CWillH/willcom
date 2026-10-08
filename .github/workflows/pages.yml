@@ -27,6 +27,14 @@ jobs:
           node-version: 22
       - name: Check portfolio
         run: npm test
+      - name: Install PDF renderer
+        run: |
+          if ! command -v pdftoppm > /dev/null; then
+            sudo apt-get update
+            sudo apt-get install -y poppler-utils
+          fi
+      - name: Generate mobile resume preview
+        run: node scripts/render-resume.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

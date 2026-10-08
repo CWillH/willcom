@@ -1,6 +1,6 @@
 import { portfolio } from './content.js';
 import { createDetailDialog } from './project-dialog.js';
-import { createResumePreview } from './resume-preview.js';
+import { createResumePreview } from './resume-preview.js?v=20261008-mobile';
 import { routes, readLocation, projectHash } from './project-routes.js';
 
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');

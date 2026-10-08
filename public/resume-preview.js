@@ -14,12 +14,43 @@ export function createResumePreview(container, url) {
   let rendering = false;
   let resizeTimer;
 
+  async function renderImages(width) {
+    const response = await fetch(new URL('./resume-preview.json', import.meta.url), { cache: 'no-store' });
+    if (!response.ok) throw new Error('Resume images are unavailable');
+    const preview = await response.json();
+    if (preview.source !== url || !preview.pages.length) throw new Error('Resume preview does not match the PDF');
+    const nextPages = document.createDocumentFragment();
+    for (const [index, page] of preview.pages.entries()) {
+      const sheet = document.createElement('div');
+      sheet.className = 'pdf-sheet';
+      const image = document.createElement('img');
+      image.alt = `Resume page ${index + 1} of ${preview.pages.length}`;
+      image.width = page.width;
+      image.height = page.height;
+      image.decoding = 'async';
+      await new Promise((resolve, reject) => {
+        image.onload = resolve;
+        image.onerror = () => reject(new Error('Resume image could not load'));
+        image.src = page.src;
+      });
+      sheet.append(image);
+      nextPages.append(sheet);
+    }
+    pages.replaceChildren(nextPages);
+    renderedWidth = width;
+    status.hidden = true;
+  }
+
   async function render() {
     const width = Math.floor(container.clientWidth);
     if (!width || width === renderedWidth || rendering) return;
     rendering = true;
     container.setAttribute('aria-busy', 'true');
     try {
+      if (matchMedia('(max-width: 700px)').matches) {
+        await renderImages(width);
+        return;
+      }
       if (!documentPromise) {
         documentPromise = import('./vendor/pdfjs/pdf.min.js').then(library => {
           pdfjs = library;
@@ -62,9 +93,13 @@ export function createResumePreview(container, url) {
       status.hidden = true;
     } catch (error) {
       console.error('Resume preview could not load:', error);
-      status.textContent = 'The preview could not load. You can still download the resume above.';
-      status.hidden = false;
       documentPromise = undefined;
+      try {
+        await renderImages(width);
+      } catch {
+        status.textContent = 'The preview could not load. You can still download the resume above.';
+        status.hidden = false;
+      }
     } finally {
       container.removeAttribute('aria-busy');
       rendering = false;
