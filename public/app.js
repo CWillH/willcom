@@ -4,6 +4,7 @@ import { createResumePreview } from './resume-preview.js';
 import { routes, readLocation, projectHash } from './project-routes.js';
 
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+history.scrollRestoration = 'manual';
 const main = document.querySelector('main');
 const backdrop = document.querySelector('.home-backdrop');
 const backdropDrawing = document.querySelector('.home-backdrop-drawing');
@@ -96,14 +97,12 @@ async function navigate(route, animate = true) {
     ).finished.catch(() => {})));
   }
   if (version !== navigationVersion) return;
-  document.querySelectorAll('.page').forEach(page => { page.hidden = page.id !== route; });
+  document.querySelectorAll('.page').forEach(page => { page.hidden = page.id !== `page-${route}`; });
   backdropDrawing.style.setProperty('--backdrop-page', routes.indexOf(route));
   currentRoute = route;
   updateTitle();
-  if (animate) {
-    window.scrollTo({ top: 0, behavior: 'instant' });
-    document.querySelector(`#${route} h1`).focus({ preventScroll: true });
-  }
+  window.scrollTo({ top: 0, behavior: 'instant' });
+  if (animate) document.querySelector(`#page-${route} h1`).focus({ preventScroll: true });
   if (animate && !reducedMotion.matches) {
     navigationSurfaces.forEach(surface => surface.animate(
       [{ opacity: 0, transform: `translateX(${direction * 25}px)` }, { opacity: 1, transform: 'translateX(0)' }],
