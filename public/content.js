@@ -3,7 +3,7 @@
 // See docs/project-sources.md for source mapping and prototype qualifications.
 import { roboticHandContent } from './robotic-hand-content.js';
 import { walletContent } from './wallet-content.js';
-import { cycloidalGearboxContent } from './cycloidal-gearbox-content.js';
+import { cycloidalGearboxContent } from './cycloidal-gearbox-content.js?v=20261013-deformation';
 import { swerveContent } from './swerve-content.js';
 
 export const portfolio = {

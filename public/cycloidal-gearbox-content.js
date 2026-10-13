@@ -15,13 +15,14 @@ export const cycloidalGearboxContent = [
   ] },
   { type: 'heading', text: 'Prototyping' },
   { type: 'text', text: 'I printed the disks and housing, then adjusted the disk profiles, pin clearances, and bearing fits through assembly checks. Excess clearance increased backlash; tight fits increased friction.' },
+  { type: 'text', text: 'I validated the disk FEA simulations by analyzing plastic deformation after heavy-load tests. This identified weak points in the thin sections between the large central bearing and the smaller bearing holes.' },
   { type: 'gallery', images: [
     preview('img_7064', 'Printed cycloidal disks, housing rings, and input components laid out on a wooden floor', 'Printed components before assembly.'),
-    photo('cycloidal-disk-bearings', 'Printed cycloidal disk with its central bearing and output-hole bearings installed', 'Disk with bearings installed.')
+    photo('cycloidal-disk-bearings', 'Printed cycloidal disk photographed to inspect deformation around the central bearing and smaller bearing holes', 'Plastic deformation analysis — disk bearing holes.')
   ] },
   { type: 'gallery', images: [
-    photo('cycloidal-disk-profile', 'Printed cycloidal disk held on its side, showing the lobed edge and thickness', 'Printed disk profile.'),
-    photo('cycloidal-pin-ring-profile', 'Printed fixed pin ring held on its side with the perimeter pins visible', 'Pin ring, side view.')
+    photo('cycloidal-disk-profile', 'Side view of the printed cycloidal disk photographed to inspect wear and plastic deformation', 'Plastic deformation analysis — disk profile.'),
+    photo('cycloidal-pin-ring-profile', 'Side view of the printed pin ring photographed to inspect wear and plastic deformation', 'Plastic deformation analysis — pin ring.')
   ] },
   { type: 'image', src: './assets/cycloidal-gearbox-exploded.png', width: 396, height: 776, size: 'medium', tall: true, alt: 'Exploded cycloidal gearbox showing the stacked housing, two disks, pins, bearings, spacers, and screws', caption: 'Exploded view' },
   { type: 'gallery', images: [

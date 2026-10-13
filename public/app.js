@@ -1,4 +1,4 @@
-import { portfolio } from './content.js';
+import { portfolio } from './content.js?v=20261013-deformation';
 import { createDetailDialog } from './project-dialog.js';
 import { createResumePreview } from './resume-preview.js?v=20261008-mobile';
 import { routes, readLocation, projectHash } from './project-routes.js';
