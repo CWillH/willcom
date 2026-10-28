@@ -17,10 +17,11 @@ export const portfolio = {
       organization: 'MAC Formula Electric',
       logo: './assets/mac-formula-electric-logo.png',
       logoScale: 1.35,
-      description: 'I recently joined the drivetrain sub-team, where I’ll help test and improve existing designs and develop new powertrain systems.',
+      description: 'As a drivetrain sub-team member, I will help test and improve existing designs and develop new powertrain systems.',
       // Add detailed blocks here for My role; description stays the brief summary.
       content: [
-        { type: 'text', text: "As apart of the drivetrain sub-team I will be working to develop and improve the motor cooling sleve, a new gearbox to replace the team's decade old one, and vibration/harmonics reduction." },
+        { type: 'text', text: "Planned drivetrain work includes improving motor cooling, developing a gearbox to replace the team's decade-old unit, and reducing vibration and harmonics." },
+        { type: 'text', text: 'Developed a MATLAB gearbox forces calculator to calculate planetary gear-mesh and planet-pin loads, helping validate the gearbox design.' },
       ]
     },
     {
@@ -29,11 +30,11 @@ export const portfolio = {
       role: 'Design Lead',
       organization: 'FIRST Robotics Competition · Team 1360',
       logo: './assets/orbit-1360-logo.jpg',
-      description: 'I led Team 1360’s mechanical sub-team, guiding the design, build, and testing of a competition robot.',
+      description: 'Led Team 1360’s mechanical sub-team through competition robot design, build, and testing.',
       content: [
-        { type: 'text', text: 'I led more than 35 mechanical members through design and assembly, imparting design standards and documentation practices that helped reduce design time by 38% compared with previous years.' },
-        { type: 'text', text: 'I introduced a part tracking system to coordinate fabrication and assembly that completely eliminated unnecessary duplicate parts.' },
-        { type: 'text', text: 'I institutionzlied the practice to include the battery, power distribution panel, robot brain, sensors, wiring routes, and maintenance access consideration in CAD that made actually assembling the robot later significantly easier. We beat our projected assembly time by a week.' },
+        { type: 'text', text: 'Led more than 35 mechanical members through design and assembly. Established design standards and documentation practices that cut design time by 38% compared with previous years.' },
+        { type: 'text', text: 'Introduced part tracking to coordinate fabrication and assembly, eliminating duplicate parts.' },
+        { type: 'text', text: 'Standardized full-system CAD planning for the battery, power distribution panel, robot controller, sensors, wiring routes, and maintenance access. Assembly finished a week ahead of the projected schedule.' },
         { type: 'heading', text: 'Learn more' },
         { type: 'project-links', items: [
           { projectId: '06', label: '2026 · FRC season', description: 'Intake and indexing improvements.' },
@@ -50,7 +51,7 @@ export const portfolio = {
       id: '01',
       slug: 'robotic-hand-v1',
       title: 'Robotic Hand V1',
-      description: 'I built an 11-DOF robotic hand with flexion/extension and abbduction/adduction in all 5 fingers.',
+      description: 'Built an 11-DOF robotic hand with flexion/extension and abduction/adduction across all five fingers.',
       purpose: 'Classwork',
       category: 'Classwork',
       dates: 'January 2026',
@@ -62,7 +63,7 @@ export const portfolio = {
       id: '02',
       slug: 'mechanical-fanning-wallet',
       title: 'Mechanical Fanning Wallet',
-      description: 'I created a unique button activated mechanical fanning wallet with 8 card capaicity.',
+      description: 'Button-activated mechanical wallet that fans and holds up to eight cards.',
       purpose: 'Personal',
       category: 'Personal',
       dates: 'November 2025',
@@ -74,7 +75,7 @@ export const portfolio = {
       id: '03',
       slug: 'cycloidal-gearbox',
       title: 'Cycloidal Gearbox',
-      description: 'I designed a 31:1 printed cycloidal gearbox with 10.9 N·m output torque at 78% efficiency.',
+      description: '31:1 printed cycloidal gearbox delivering 10.9 N·m output torque at 78% efficiency.',
       purpose: 'Student Teams',
       category: 'Student Teams',
       dates: 'July 2025',
@@ -86,7 +87,7 @@ export const portfolio = {
       id: '06',
       slug: 'andromeda',
       title: 'Andromeda',
-      description: 'I led mechanical design for Andromeda, Team 1360’s 2026 FRC robot. The team reached the Ontario Provincial Championship semifinals and qualified for the FIRST World Championship.',
+      description: 'Mechanical design lead for Andromeda, Team 1360’s 2026 FRC robot. The team reached the Ontario Provincial Championship semifinals and qualified for the FIRST World Championship.',
       purpose: 'First Robotics Competition · Team 1360',
       category: 'Student Teams',
       dates: '2025–2026 · Design Lead',
@@ -94,19 +95,19 @@ export const portfolio = {
       placeholder: false,
       content: [
         { type: 'tags', items: ['Mechanical Design', 'Team Leadership', 'Prototyping', 'Design Standards'] },
-        { type: 'lead', text: 'I led the design of Andromeda, Team 1360’s 2026 FRC robot. The team reached the Ontario Provincial Championship semifinals and qualified for the FIRST World Championship.' },
+        { type: 'lead', text: 'Mechanical design lead for Andromeda, Team 1360’s 2026 FRC robot. The team reached the Ontario Provincial Championship semifinals and qualified for the FIRST World Championship.' },
         { type: 'heading', text: 'Results' },
-        { type: 'text', text: 'Team 1360 ranked 17th of 185 Canadian teams and rose from 536th to 185th worldwide between 2025 and 2026. In 2026, Team 1360 recorded its highest normalized EPA since our peak in 2018.' },
+        { type: 'text', text: 'Team 1360 ranked 17th of 185 Canadian teams and rose from 536th to 185th worldwide between 2025 and 2026. In 2026, the team recorded its highest normalized EPA since the 2018 peak.' },
         { type: 'image', src: './assets/andromeda-team-performance.png', width: 1839, height: 722, alt: 'Team 1360 normalized EPA from 2016 to 2026, peaking in 2018 with 2026 the highest year since that peak', caption: 'Team 1360 normalized EPA, 2016–2026.' },
         { type: 'heading', text: 'Mid-season improvements' },
-        { type: 'text', text: 'I led Andromeda’s mid-season redesign, improving the indexing and intake systems. The indexing changes increased scoring throughput by nearly 150%. Collisions at our first competition broke polycarbonate plates and printed bearing caps, causing a 68% intake failure rate. I led the intake redesign with thicker plates and custom-machined aluminum bearing caps, reducing breakdowns by 95%. I tested the revised intake through wall collisions, throwing, and impacts.' },
+        { type: 'text', text: 'A mid-season redesign improved Andromeda’s indexing and intake systems. Indexing changes increased scoring throughput by nearly 150%. Collisions at the first competition broke polycarbonate plates and printed bearing caps, causing a 68% intake failure rate. The redesigned intake used thicker plates and custom-machined aluminum bearing caps, reducing breakdowns by 95%. The revised intake was tested through wall collisions, throws, and impacts.' },
         {
           type: 'feature',
           media: { type: 'video', src: './assets/frc-2026-shooting.mp4', poster: './assets/frc-2026-shooting-poster.jpg', label: 'Team 1360 robot shooting during the 2026 FRC season' },
           heading: 'Design practices',
           content: [
-            { type: 'text', text: 'I implemented the design standards I established for the team throughout Andromeda’s mechanical design. I used part tracking to coordinate fabrication and assembly and avoid duplicate parts.' },
-            { type: 'text', text: 'I brought electronics-planning methods from Helios into Andromeda’s CAD assembly. I planned battery, power distribution, controls, and sensor placement alongside wiring routes and maintenance access. This helped reduce wiring time from one week to three days.' }
+            { type: 'text', text: 'Applied the team’s design standards to Andromeda’s mechanical design. Part tracking coordinated fabrication and assembly while preventing duplicate parts.' },
+            { type: 'text', text: 'Electronics-planning methods from Helios informed Andromeda’s CAD. Battery, power distribution, controls, sensor placement, wiring routes, and maintenance access were planned together, reducing wiring time from one week to three days.' }
           ]
         },
         { type: 'gallery', images: [
@@ -119,7 +120,7 @@ export const portfolio = {
       id: '04',
       slug: 'differential-swerve-drive',
       title: 'Differential Swerve Drive',
-      description: 'I built a four-motor swerve chassis with Python controls and measured about 7.0 ft/s.',
+      description: 'Four-motor swerve chassis with Python controls; measured speed was about 7.0 ft/s.',
       purpose: 'Classwork',
       category: 'Classwork',
       dates: 'November 2025',
@@ -131,7 +132,7 @@ export const portfolio = {
       id: '05',
       slug: 'helios',
       title: 'Helios',
-      description: 'I led the design of a robot concept for a one-week CAD competition, placing 3rd of 150+ teams.',
+      description: 'Led a robot concept for a one-week CAD competition, placing 3rd among 150+ teams.',
       purpose: 'West Coast Products FRC Cadathon · Team 1360',
       category: 'Student Teams',
       dates: 'November 10–17, 2025',
@@ -139,21 +140,46 @@ export const portfolio = {
       placeholder: false,
       content: [
         { type: 'tags', items: ['Onshape', 'Fusion 360', 'Mechanism Design', 'Technical Documentation'] },
-        { type: 'lead', text: 'I led the design of Helios for the one-week 2025 WCP Cadathon. Team 1360’s robot concept and technical binder placed 3rd among more than 150 teams.' },
+        { type: 'lead', text: 'Led Helios for the one-week 2025 WCP Cadathon. Team 1360’s robot concept and technical binder placed 3rd among more than 150 teams.' },
         { type: 'links', items: [{ label: 'Read the technical binder', description: 'Robot design and game strategy.', featured: true, newTab: true, href: 'https://drive.google.com/file/d/1NdKU0Dtdt5ZYhMjqqKIRh9OMxwaFLkP9/view' }] },
         { type: 'image', src: './assets/helios_render.jpg', alt: 'Rendered Helios robot with a blue chassis, elevator, arm, and ground intake' },
         { type: 'heading', text: 'Design Constraints' },
-        { type: 'text', text: 'I compared scoring, cycle time, teammate dependence, and packaging across three robot classes, eventualyl deciding on the gadgeteer class. This established our general design constraints such as a weight limit of 100 pounds and max vertical reach of 42"' },
+        { type: 'text', text: 'Compared scoring, cycle time, teammate dependence, and packaging across three robot classes before selecting the gadgeteer class. The design constraints included a 100 lb weight limit and 42 in maximum vertical reach.' },
         {
           type: 'feature',
           media: { type: 'image', src: './assets/helios-cad.jpg', alt: 'Helios CAD assembly with the elevator and arm extended above the chassis' },
           heading: 'Design',
           content: [
             { type: 'text', text: 'The design used an elevator-mounted arm, ground intake, indexer, and adjustable shooter. A two-stage continuous elevator also deployed a detachable climber with a cam grip and winch.' },
-            { type: 'text', text: 'I worked to incorporate electronic layouts and battery accesss into the CAD which was the first time my team had ever attmpedted this. I would later re-implement these practices I developed with great success on Andromeda in 2026.' }
+            { type: 'text', text: 'Integrated electronics layouts and battery access into CAD for the first time on the team; the same practices were later applied to Andromeda.' }
           ]
         },
-        { type: 'callout', label: 'Next steps', text: 'I calculated the climber had a safety factor of 1.1 to show it would likely work in real life. With more time, I would have tried to increased that margin and test a physical prototype.' }
+        { type: 'callout', label: 'Next steps', text: 'The climber’s calculated safety factor was 1.1. With more time, the margin could be increased and a physical prototype tested.' }
+      ]
+    },
+    {
+      id: '07',
+      slug: 'gravity-towel-holder',
+      title: 'Home Improvements',
+      description: 'Compact, single-piece 3D-printed gravity towel holder for towels up to 5 lb.',
+      purpose: 'Gravity Towel Holder',
+      category: 'Personal',
+      dates: 'July 2026 - Present',
+      image: './assets/towel-holder-installed.jpeg',
+      placeholder: false,
+      content: [
+        { type: 'tags', items: ['Product Design', '3D Printing', 'Force Calculations'] },
+        { type: 'lead', text: 'Calculated contact forces to maximize grip in a compact gravity towel holder designed for towels up to 5 lb.' },
+        { type: 'feature', media: { type: 'image', src: './assets/towel-holder-installed.jpeg', alt: 'Two printed towel holders mounted beside a bathroom mirror' }, heading: 'Mounting', content: [
+          { type: 'text', text: 'A rear slot accommodates a Command strip for flush, screw-free mounting and easy removal.' },
+          { type: 'text', text: 'Printed as one piece for faster production.' }
+        ] },
+        { type: 'heading', text: 'Wall clearance' },
+        { type: 'text', text: 'Prototype revisions increased the wall offset so towels can touch the wall, reducing trapped moisture and helping them dry.' },
+        { type: 'gallery', images: [
+          { src: './assets/towel-holder-clearance.jpeg', alt: 'Towel hanging from the holder with clearance to the wall' },
+          { src: './assets/towel-holder-grip.jpeg', alt: 'Close view of the holder opening and textured internal grip' }
+        ] }
       ]
     }
   ]

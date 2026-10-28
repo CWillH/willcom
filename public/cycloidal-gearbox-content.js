@@ -3,19 +3,19 @@ const preview = (name, alt, caption) => ({ src: `./assets/project-process/${name
 
 export const cycloidalGearboxContent = [
   { type: 'tags', items: ['Onshape', '3D Printing', 'Tolerance Design', 'Backlash Testing', 'Data Acquisition'] },
-  { type: 'lead', text: 'I designed a 31:1 printed cycloidal gearbox with 10.9 N·m output torque at 78% efficiency.' },
+  { type: 'lead', text: 'A 31:1 printed cycloidal gearbox delivering 10.9 N·m output torque at 78% efficiency.' },
   { type: 'image', src: './assets/cycloidal_gearbox_half.jpg', size: 'wide', alt: 'Sectioned CAD model showing the cycloidal disks, pins, bearings, and housing' },
   { type: 'heading', text: 'Design' },
-  { type: 'text', text: 'Team 1360’s 2025 robot struggled with arm backlash. I designed this gearbox to improve positioning and support future mechanisms. It had to suit a 3-axis mill, use inexpensive parts, and fit a range of FRC applications.' },
+  { type: 'text', text: 'Team 1360’s 2025 robot struggled with arm backlash. Designed to improve positioning and support future mechanisms, the gearbox suits a 3-axis mill, uses inexpensive parts, and fits a range of FRC applications.' },
   { type: 'heading', text: 'Design considerations' },
   { type: 'list', items: [
-    'CNC machining: I kept the geometry compatible with a 3-axis mill. I split the cycloidal shaft into four independently machinable pieces, joined and precisely aligned with dowel pins.',
-    'Cost: I chose inexpensive, standard shoulder bolts, dowel pins, and bearings, then designed the custom plates around them.',
-    'Versatility: I used a standard FRC half-inch hex bore for shaft-driven setups and direct motor mounting with adapters. I made a Kraken X60 adapter and used standard #10-32 mounting holes. At 1.2 inches thick and barely 2.5 inches in diameter, the 31:1 gearbox was about one-third the length of a comparable planetary gearbox stack.'
+    'CNC machining: Geometry fits a 3-axis mill. A four-piece cycloidal shaft simplifies machining; dowel pins join and align the pieces.',
+    'Cost: Inexpensive, standard shoulder bolts, dowel pins, and bearings keep costs down, with custom plates designed around them.',
+    'Versatility: A standard FRC half-inch hex bore supports shaft-driven setups; adapters allow direct motor mounting. The Kraken X60 adapter uses standard #10-32 mounting holes. At 1.2 inches thick and 2.5 inches in diameter, the 31:1 gearbox is about one-third the length of a comparable planetary gearbox stack.'
   ] },
   { type: 'heading', text: 'Prototyping' },
-  { type: 'text', text: 'I printed the disks and housing, then adjusted the disk profiles, pin clearances, and bearing fits through assembly checks. Excess clearance increased backlash; tight fits increased friction.' },
-  { type: 'text', text: 'I validated the disk FEA simulations by analyzing plastic deformation after heavy-load tests. This identified weak points in the thin sections between the large central bearing and the smaller bearing holes.' },
+  { type: 'text', text: 'Printed disks and housing supported iterative checks of disk profiles, pin clearances, and bearing fits. Excess clearance increased backlash; tight fits increased friction.' },
+  { type: 'text', text: 'Heavy-load tests and deformation analysis validated the disk FEA simulations, revealing weak sections between the large central bearing and smaller bearing holes.' },
   { type: 'gallery', images: [
     preview('img_7064', 'Printed cycloidal disks, housing rings, and input components laid out on a wooden floor', 'Printed components before assembly.'),
     photo('cycloidal-disk-bearings', 'Printed cycloidal disk photographed to inspect deformation around the central bearing and smaller bearing holes', 'Plastic deformation analysis — disk bearing holes.')
@@ -30,7 +30,7 @@ export const cycloidalGearboxContent = [
     preview('img_7147', 'Closed black printed cycloidal gearbox standing on a workbench with its output bearing and hex bore visible', 'Assembled gearbox.')
   ] },
   { type: 'heading', text: 'Testing' },
-  { type: 'text', text: 'I reduced backlash from about 7° to 0.4°. I measured mechanical efficiency with a torque wrench; lubrication improvements raised it from 64% to 78%.' },
+  { type: 'text', text: 'Backlash fell from about 7° to 0.4°. Torque-wrench measurements showed lubrication improvements raised mechanical efficiency from 64% to 78%.' },
   { type: 'text', text: 'At 0.45 N·m input torque and 78% efficiency, output torque is 10.9 N·m. Estimated maximum output speed is about 194 RPM near no load.' },
   { type: 'gallery', media: [
     { type: 'video', src: './assets/cycloidal-gearbox-demo.mp4', poster: './assets/cycloidal-gearbox-video-poster.jpg', label: 'Cycloidal gearbox operation', caption: 'Gearbox operation.' },

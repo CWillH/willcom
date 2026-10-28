@@ -226,8 +226,8 @@ export function createDetailDialog(dialog, projects = [], { onChange = () => {} 
     content.querySelectorAll('video').forEach(video => video.pause());
     currentEntry = project;
     title.textContent = project.title;
-    purpose.textContent = project.purpose || '';
-    purpose.hidden = !project.purpose;
+    purpose.textContent = project.category || project.purpose || '';
+    purpose.hidden = !(project.category || project.purpose);
     dates.textContent = project.dates || '';
     dates.hidden = !project.dates;
     logo.hidden = !project.logo;
