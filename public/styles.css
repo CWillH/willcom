@@ -98,6 +98,12 @@ main { flex: 1; min-width: 0; overflow: clip; }
   background-image: url('./assets/wallet-wireframe.svg');
   transform: rotate(8deg);
 }
+@media (min-width: 641px) {
+  .wallet-wireframe {
+    top: clamp(135px, 20svh, 170px);
+    bottom: auto;
+  }
+}
 .experience-wireframes { position: absolute; inset: 0; transform: translateX(100%); }
 .helios-wireframe {
   top: 90px;
